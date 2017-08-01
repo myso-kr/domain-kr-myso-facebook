@@ -3,7 +3,7 @@
   <head>
     <script>
       {% if page.id %}
-        location.href = "{{ page.excerpt | remove: '<p>' | remove: '</p>' }}"
+        location.href = "{{ page.excerpt | remove: '<p>' | remove: '</p>' | remove: '\r' | remove: '\n' }}"
       {% else %}
         location.href = "http://blog.myso.kr/"
       {% endif %}
