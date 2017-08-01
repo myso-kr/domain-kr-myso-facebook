@@ -1,16 +1,11 @@
 <!doctype html>
 <html>
   <head>
-
+    <script>
+      {% if page.title %}
+        {{ page.url }} {{ page.title }}
+        {{ page.content }}
+      {% endif %}
+    </script>
   </head>
-<ul>
-  {{ page.url }} {{ page.title }}
-  {{ page.content }}
-  {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      {{ post.excerpt }}
-    </li>
-  {% endfor %}
-</ul>
 </html>
