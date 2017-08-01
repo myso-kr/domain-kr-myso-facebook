@@ -2,8 +2,9 @@
 <html>
   <head>
     <script>
-      {% if page.title %}
+      {% if page.id %}
         {{ page.url }} {{ page.title }}
+      {% else %}
         {{ page.content }}
       {% endif %}
     </script>
