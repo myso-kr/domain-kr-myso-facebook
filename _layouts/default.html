@@ -3,9 +3,9 @@
   <head>
     <script>
       {% if page.id %}
-        {{ page.url }} {{ page.title }}
+        location.href = "{{ post.excerpt | remove: '<p>' | remove: '</p>' }}"
       {% else %}
-        {{ page.content }}
+        location.href = "http://blog.myso.kr/"
       {% endif %}
     </script>
   </head>
