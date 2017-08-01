@@ -1,9 +1,11 @@
 <!doctype html>
-<html lang="{{ site.lang | default: "en-US" }}">
+<html>
   <head>
 
   </head>
 <ul>
+  {{ page.url }} {{ page.title }}
+  {{ page.excerpt }}
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
