@@ -1,12 +1,10 @@
 <!doctype html>
 <html>
   <head>
-    <script>
-      {% if page.id %}
-        location.href = {{ page.excerpt | remove: '<p>' | remove: '</p>' }}
-      {% else %}
-        location.href = "http://blog.myso.kr/"
-      {% endif %}
-    </script>
+    {% if page.id %}
+    <meta http-equiv="refresh" content="0; url={{ page.excerpt | remove: '<p>' | remove: '</p>' }}"></meta>
+    {% else %}
+    <meta http-equiv="refresh" content="0; url=http://blog.myso.kr/"></meta>
+    {% endif %}
   </head>
 </html>
