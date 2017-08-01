@@ -1,5 +1,5 @@
 theme: jekyll-theme-minimal
-permalink: /_posts/
+permalink: /:categories/:title/
 social:
   blog: http://blog.myso.kr/
   post: http://post.naver.com/cw4196
