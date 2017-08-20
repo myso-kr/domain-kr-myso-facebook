@@ -1,3 +1,4 @@
 theme: jekyll-theme-minimal
 permalink: /:title
-
+timezone: Asia/Seoul
+future: true
