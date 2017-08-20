@@ -1,1 +1,1 @@
-https://github.com/myso-kr/domain-kr-myso-link/raw/master/bin/TeamViewerQS.exe
+https://drive.google.com/open?id=0B4yQ4smzgw7dVHZQZDlobnZCcGs
