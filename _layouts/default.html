@@ -1,4 +1,4 @@
-{% capture redirection_url %}{% if page.id %}{{ page.excerpt | remove: '<p>' | remove: '</p>' | remove: '\n' }}{% else %}https://blog.myso.kr/{% endif %}{% endcapture %}
+{% capture redirection_url %}{% if page.id %}{{ page.excerpt | remove: '<p>' | remove: '</p>' | strip }}{% else %}https://blog.myso.kr/{% endif %}{% endcapture %}
 <!doctype html>
 <html>
   <head>
