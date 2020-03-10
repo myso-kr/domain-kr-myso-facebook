@@ -1,4 +1,3 @@
-{% capture redirection_url %}{% if page.id %}{{ page.excerpt | remove: '<p>' | remove: '</p>' | strip }}{% else %}https://blog.myso.kr/{% endif %}{% endcapture %}
 <!doctype html>
 <html>
   <head>
@@ -20,8 +19,8 @@
     <meta property="profile:last_name" content="Choi">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js" integrity="sha256-VeNaFBVDhoX3H+gJ37DpT/nTuZTdjYro9yBruHjVmoQ=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.19.2/URI.min.js" integrity="sha256-4G6Z1Q3FCGF8hoYV4zb54OENwcZkuE0NnvblFsJTg7s=" crossorigin="anonymous"></script>
-    <script>
-      var uri = URI("{{ site.redirection_url }}").search(location.search).hash(location.hash).segment(location.pathname.replace(/^\/([^\/]+\/[^\/]+)?/g, '')); !uri.hasSearch("proxyReferer") && uri.setSearch("proxyReferer", document.referrer);
+    <script>{% capture redirection_url %}{% if page.id %}{{ page.excerpt | remove: '<p>' | remove: '</p>' | strip }}{% else %}https://www.myso.kr/{% endif %}{% endcapture %}
+      var uri = URI("{{ redirection_url }}").search(location.search).hash(location.hash).segment(location.pathname.replace(/^\/([^\/]+\/[^\/]+)?/g, '')); !uri.hasSearch("proxyReferer") && uri.setSearch("proxyReferer", document.referrer);
       window.location.replace(uri.href());
     </script>
   </head>
