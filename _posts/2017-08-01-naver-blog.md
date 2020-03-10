@@ -1,1 +1,1 @@
-http://blog.myso.kr/
+http://blog.myso.kr
